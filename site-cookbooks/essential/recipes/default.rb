@@ -8,7 +8,7 @@
 #
 
 # install
-%w{ zsh emacs }.each do |p|
+%w{ zsh emacs git }.each do |p|
   package p do
     action :install
   end

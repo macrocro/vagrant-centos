@@ -1,7 +1,7 @@
 {
   "sources": {
-    "chef-solo-search": {
-      "locked_version": "0.5.1"
+    "yum": {
+      "locked_version": "2.4.0"
     }
   }
 }
