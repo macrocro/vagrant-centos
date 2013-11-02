@@ -1,11 +1,11 @@
-bases CHANGELOG
-===============
+essential CHANGELOG
+===================
 
-This file is used to list changes made in each version of the bases cookbook.
+This file is used to list changes made in each version of the essential cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of bases
+- [your_name] - Initial release of essential
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
