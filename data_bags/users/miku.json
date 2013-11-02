@@ -1,0 +1,10 @@
+{
+    "id": "miku",
+    "password" : "$1$AcsmstIR$PS7JScEbv309ee1ngij7N0",
+    "comment": "HATSUNE Miku",
+    "ssh_keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9o5vlyV825wWBDX2AHs8jxdEJRdo7tUczlKSrso3iPe8oyh5U5xu+a+yK79Zb9wwkguACbxM3MbYiUxVF9RPV+P8fakDK8bjBj4vSs4B6zLRD72xoAcvCH5VAYIr0e1AFvbjBtSVamx0DABRlesCMVag++UuzMV5cJhhiuONseVCv3A5Zq14XY4AiKrHB9OxMikbecsqzpvF/dU5kZ6YPcsvSuSe38ZRDnlzM0qPpSTLlvnfKxaLZkaQyLRkiTeqv3/5iSS08uBbhH3jkg/w8xahJLlXPgYLjJXT7FQcQYqb6k1FXqv+vuqV2AaOSLnyspcNSMz9XI1OwM0XWz7yN youki@yuuki.local"],
+    "groups": ["miku","users"],
+    "comment": "miku",
+    "shell": "\/bin\/zsh",
+    "action": "create"
+}
