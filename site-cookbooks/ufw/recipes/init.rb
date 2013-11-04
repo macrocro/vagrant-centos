@@ -6,7 +6,7 @@ service iptables start
 iptables -F
 ufw reset
 ufw default deny
-ufw limit "#{node['ssh']['port']}"
+ufw allow "#{node['ssh']['port']}"
 ufw allow 80/tcp
 yes | ufw enable
 EOH
