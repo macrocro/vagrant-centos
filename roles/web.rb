@@ -2,11 +2,13 @@ name 'web'
 description 'Web Server'
 
 run_list(
-	 "recipe[yum]",
+         "recipe[yum]",
          "recipe[yum::epel]",
          "recipe[yum::remi]",
          "recipe[essential]",
          "recipe[users]",
+         "recipe[users::sudo]",
+         "recipe[users::git-config]",
          "recipe[ruby_build]",
          "recipe[rbenv::system]",
          "recipe[apache]",
@@ -32,7 +34,7 @@ default_attributes(
                    "ssh" => {
                      "port" => 22
                    },
-		   "mysql" => {
-		     "root_password" => "password"
-		   }
+                   "mysql" => {
+                     "root_password" => "password"
+                   }
                    )

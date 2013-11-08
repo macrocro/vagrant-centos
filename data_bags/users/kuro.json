@@ -6,5 +6,9 @@
     "groups": ["kuroda","users"],
     "comment": "kuroda",
     "shell": "\/bin\/zsh",
+    "git": {
+        "name": "Yuki Kuroda",
+        "email": "me@macrocro.com"
+    },
     "action": "create"
 }

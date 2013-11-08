@@ -1,5 +1,8 @@
 {
     "run_list":[
         "role[web]"
-    ]
+    ],
+    "sudo":{
+        "users":["kuroda"]
+    }
 }

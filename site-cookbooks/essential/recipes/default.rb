@@ -13,10 +13,3 @@
     action :install
   end
 end
-
-#bash "set git config" do
-#  code <<-EOH
-#    git config --global user.name "#{node['git']['name']}"
-#    git config --global user.email #{node['git']['email']}
-#  EOH
-#end
