@@ -8,8 +8,15 @@
 #
 
 # install
-%w{ zsh emacs git }.each do |p|
+%w{ zsh emacs git unzip }.each do |p|
   package p do
     action :install
   end
+end
+
+bash "set git config" do
+  code <<-EOH
+    git config --global user.name "#{node['git']['name']}"
+    git config --global user.email #{node['git']['email']}
+  EOH
 end
