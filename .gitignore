@@ -6,14 +6,18 @@ acceptance_config.yml
 boxes/*
 /Vagrantfile
 .vagrant
+.vagrant/*
 cookbooks/
+
+# Backupfile
+*~
 
 # Bundler/Rubygems
 *.gem
 .bundle
 pkg/*
 tags
-/Gemfile.lock
+Gemfile.lock
 test/tmp/
 
 # Documentation
@@ -46,3 +50,6 @@ website/docs/Rakefile
 website/www/.sass-cache
 website/www/build
 website/www/Rakefile
+
+.vagrant/machines/default/virtualbox/id
+Berksfile.lock
