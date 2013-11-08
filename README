@@ -1,20 +1,39 @@
-You should get ready Installing chef and knife-solo by RubyGems
+You should get ready Installing chef, knife-solo and berkshelf by RubyGems
+$gem install chef
+$gem install knife-solo
+$gem install berkshelf
 
 $mkdir -f ~/vagrant/centos
 $cd ~/vagrant/centos
-$vagrant box add centos http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box # Download VM Image
-$vagrant init # make Vagrantfile (= a Vagrant setting file)
+
+# Download VM Image
+$vagrant box add centos http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box
+
+# make Vagrantfile (= a Vagrant setting file)
+$vagrant init 
 
 $emacs Vagrantfile
 config.vm.box = "base"
 ↓
 config.vm.box = "centos"
 
-$vagrant up # boot VM
-$knife cook prepare centos # Install Chef and so on In VM
-$vagrant ssh-config --host centos >> ~/.ssh/config # Setting up Local ssh
+# boot VM
+$vagrant up
+
+# Install Chef and so on In VM
+$knife solo prepare centos
+
+# Install Opscode Cookbooks and 3rd Party Cookbooks
+$berks install --path cookbooks
+
+# Execute Cookbooks on VM
+$knife solo cook centos
+
 
 How to Login
-1. $vagrant ssh
+1. 
+$vagrant ssh-config --host centos >> ~/.ssh/config # Setting up Local ssh
+$ssh centos
 or
-2. $ssh centos
+2.
+$vagrant ssh
