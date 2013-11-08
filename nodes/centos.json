@@ -1,1 +1,5 @@
-{"run_list":["role[web]"]}
+{
+    "run_list":[
+        "role[web]"
+    ]
+}
