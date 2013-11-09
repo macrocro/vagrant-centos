@@ -1,7 +1,10 @@
 {
     "run_list":[
-        "role[web]",
-        "recipe[deploy::his-gakusei]"
+        "role[web]"
+        //"recipe[deploy::his-gakusei]",
+        //"recipe[deploy::emacs]",
+        //"recipe[deploy::config]",
+        //"recipe[webdicom]"
     ],
     "sudo":{
         "users":["kuroda"]

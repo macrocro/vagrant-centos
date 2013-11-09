@@ -2,27 +2,25 @@ name 'web'
 description 'Web Server'
 
 run_list(
-         # "recipe[yum]",
-         # "recipe[yum::epel]",
-         # "recipe[yum::remi]",
-         # "recipe[essential]",
-         # "recipe[users]",
+         "recipe[yum]",
+         "recipe[yum::epel]",
+         "recipe[yum::remi]",
+         "recipe[essential]",
+         "recipe[users]",
          "recipe[users::sudo]",
-         # "recipe[users::git-config]",
-         # "recipe[ruby_build]",
-         # "recipe[rbenv::system]",
+         "recipe[users::git-config]",
+         "recipe[ruby_build]",
+         "recipe[rbenv::system]",
          "recipe[apache]",
-         # "recipe[mysql]",
-         # "recipe[php]",
-         # "recipe[phpmyadmin]",
+         "recipe[mysql]",
+         "recipe[php]",
+         "recipe[phpmyadmin]",
          "recipe[ssh]",
          "recipe[ufw::install]",
          "recipe[ufw::init]"
 
          #####################
          # "recipe[nginx]",
-         #####################
-         # "recipe[webdicom]"
          #####################
 
          )
