@@ -1,4 +1,16 @@
-You should get ready Installing chef, knife-solo and berkshelf by RubyGems
+You should create your json file, reference to data_bags/users/kuro.json !!
+
+# password
+openssl passwd -1 'password'
+
+# ssh_keys
+ssh-keygen -t rsa -f ~/.ssh/vagrant-centos
+cat ~/.ssh/vagrant-centos.pub
+
+###############################
+
+Before you execute, Installing chef, knife-solo and berkshelf by RubyGems
+
 $gem install chef
 $gem install knife-solo
 $gem install berkshelf
