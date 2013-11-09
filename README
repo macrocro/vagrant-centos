@@ -36,3 +36,63 @@ $knife solo cook centos
 $vagrant ssh
 or
 $ssh centos
+
+
+###############################
+
+# ssh ユーザー名 で ユーザー名@vagrantにログインするために…
+$ssh-keygen -t rsa -f ~/.ssh/vagrant-centos
+$emacs ~/.ssh/config
+------------
+Host ユーザー名
+  HostName 127.0.0.1
+  User kuroda
+  Port 2222
+  PasswordAuthentication no
+  IdentityFile ~/.ssh/vagrant-centos
+  IdentitiesOnly yes
+  ForwardAgent yes
+------------
+
+###############################
+
+# Githubのprivateレポジトリからcloneするために…
+
+# ローカル
+$emacs ~/.ssh/config
+------------
+Host centos
+  HostName 127.0.0.1
+  User kuroda
+  Port 2222
+  PasswordAuthentication no
+  IdentityFile /Users/youki/.ssh/vagrant-centos
+  IdentitiesOnly yes
+  ForwardAgent yes << 追記
+
+Host kuroda
+  HostName 127.0.0.1
+  User kuroda
+  Port 2222
+  PasswordAuthentication no
+  IdentityFile /Users/youki/.ssh/vagrant-centos
+  IdentitiesOnly yes
+  ForwardAgent yes << 追記
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github
+  IdentitiesOnly yes
+------------
+
+# githubに使っている鍵を認証エージェントに追加
+$ssh-add ~/.ssh/github
+
+# 確認
+$ssh-add -l
+
+# リモート
+$sudo ssh-add -l
+# 同じく表示されれば完了
+

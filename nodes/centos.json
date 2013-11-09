@@ -1,8 +1,10 @@
 {
     "run_list":[
-        "role[web]"
+        "role[web]",
+        "recipe[deploy::his-gakusei]"
     ],
     "sudo":{
         "users":["kuroda"]
-    }
+    },
+    "execute_user": "kuroda"
 }
