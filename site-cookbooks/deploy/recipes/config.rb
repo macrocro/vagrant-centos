@@ -2,10 +2,11 @@ bash "git clone .emacs.d" do
   code <<-EOH
     cd /home/kuroda/
     git clone git@github.com:macrocro/config
+    mv config .config
     rm -rf .emacs.d
     rm -f .zshrc
-    ln -s config/.emacs.d .emacs.d
-    ln -s config/.zshrc .zshrc
+    ln -s .config/.emacs.d .emacs.d
+    ln -s .config/.zshrc .zshrc
     chmod -R 755 .emacs.d
     chown -R kuroda:kuroda .emacs.d
     chmod 755 .zshrc
