@@ -39,10 +39,10 @@ default_attributes(
                    },
                    "mysql" => {
                      "root_password" => "password"
-                   },
-                   "gitlab" => {
-                     "mysql_password" => "wi3JBeBVnT3",
-                     "domain_name" => "localhost",
-                     "access_port" => "8181"
-                   },
+                   }# ,
+                   # "gitlab" => {
+                   #   "mysql_password" => "wi3JBeBVnT3",
+                   #   "domain_name" => "localhost",
+                   #   "access_port" => "8181"
+                   # },
                    )
