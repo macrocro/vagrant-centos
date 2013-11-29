@@ -1,0 +1,13 @@
+{
+    "id": "kojima",
+    "password" : "$1$AcsmstIR$PS7JScEbv309ee1ngij7N0",
+    "comment": "Kojima's Comment",
+    "ssh_keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6b7/Sndicxqc+XckHhUfjBLrXr4fWN4It5ohRUCZ0Y/zhPjoTqUH3maadBrJXtj6qOKxsiVvnpfn8hKyuGM6bthX+VD8z0A84KGw4T3cOr4jGSo4rs/MS6DrUeD6ZbhC+PlwIiCEuSpO9D+sA4ntZFCiyCw1sfOEUkXSdQneyeHE9qkxz9O/C+HneSdkSJg4tT6G6vouFJX0qusP3qVAps6K2ZfWOxJ/0Av8VEDVhgmPkOgXEzN3uI+5EEjlJql4Fl5Tn9FfBYkmISQ9+H9WV+CFdXx0zOU4iWeyZB0yu7i4W7L52NLuWBr8ncufqZILeCekugrp5VvAO4V8WODHf richmedia@richmedia-no-MacBook-Air.local"],
+    "groups": ["kojima","users"],
+    "shell": "\/bin\/zsh",
+    "git": {
+        "name": "Hiroki Kojima",
+        "email": "h-kojima@rich.co.jp"
+    },
+    "action": "create"
+}

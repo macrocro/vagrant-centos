@@ -1,0 +1,53 @@
+{
+    "run_list":[
+        // yum settings
+        "recipe[yum]",
+        "recipe[yum::epel]",
+        "recipe[yum::remi]",
+
+        // Essential tools install %w{ zsh emacs git unzip }
+        "recipe[essential]",
+
+        // add users from data_bags
+        "recipe[users]",
+        "recipe[users::sudo_wheel_add]",
+        "recipe[users::git-config]",
+
+        // install rbenv and install ruby (set version at role/web.rb)
+        "recipe[ruby_build]",
+        "recipe[rbenv::system]",
+
+        // install apache
+        "recipe[apache]",
+
+        // install mysql
+        "recipe[mysql]",
+
+        // install php
+        "recipe[php]",
+
+        // install phpmyadmin
+        "recipe[phpmyadmin]"
+
+
+    ],
+    "sudo":{
+        "users":["kuroda"]
+    },
+    "rbenv":{
+        "rubies": ["2.0.0-p247"]
+    },
+    "mysql":{
+        "root_password": "Sb3XbXmLz1"
+    },
+    "apache":{
+        "server_name": "132.242.234.163:80"
+    },
+    "basic":[
+        {
+            "path": "/usr/share/phpMyAdmin",
+            "user": "cXSJuCKp8c",
+            "password": "hHrGj8TwMV"
+        }
+    ]
+}

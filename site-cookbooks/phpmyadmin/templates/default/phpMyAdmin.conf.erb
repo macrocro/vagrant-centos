@@ -1,14 +1,13 @@
 # phpMyAdmin - Web based MySQL browser written in php
-# 
+#
 # Allows only localhost by default
 #
 # But allowing phpMyAdmin to anyone other than localhost should be considered
 # dangerous unless properly secured by SSL
 
-Alias /phpMyAdmin /usr/share/phpMyAdmin
-Alias /phpmyadmin /usr/share/phpMyAdmin
+Alias /phpMyAdmin4nDXLbQh8G /usr/share/phpMyAdmin
 
-# <Directory /usr/share/phpMyAdmin/>
+<Directory /usr/share/phpMyAdmin/>
 #    <IfModule mod_authz_core.c>
 #      # Apache 2.4
 #      Require local
@@ -20,7 +19,8 @@ Alias /phpmyadmin /usr/share/phpMyAdmin
 #      Allow from 127.0.0.1
 #      Allow from ::1
 #    </IfModule>
-# </Directory>
+     AllowOverride All
+</Directory>
 
 # <Directory /usr/share/phpMyAdmin/setup/>
 #    <IfModule mod_authz_core.c>

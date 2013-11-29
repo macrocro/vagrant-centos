@@ -273,8 +273,11 @@ ServerAdmin root@localhost
 # You will have to access it by its address anyway, and this will make
 # redirections work in a sensible way.
 #
+<% if node["apache"]["server_name"] %>
+ServerName <%= node["apache"]["server_name"] %>
+<% else %>
 #ServerName www.example.com:80
-
+<% end %>
 #
 # UseCanonicalName: Determines how Apache constructs self-referencing
 # URLs and the SERVER_NAME and SERVER_PORT variables.

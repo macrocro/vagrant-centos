@@ -11,6 +11,9 @@ package "phpmyadmin" do
   action :install
 end
 
+service "httpd" do
+end
+
 template "/etc/httpd/conf.d/phpMyAdmin.conf" do
   source "phpMyAdmin.conf.erb"
   owner "root"

@@ -8,6 +8,7 @@ run_list(
          "recipe[essential]",
          "recipe[users]",
          "recipe[users::sudo]",
+         "recipe[users::sudo_wheel_add]",
          "recipe[users::git-config]",
          "recipe[ruby_build]",
          "recipe[rbenv::system]",
@@ -31,10 +32,10 @@ default_attributes(
                    "rbenv" => {
                      "rubies" => "2.0.0-p247"
                    },
-                   "ssh" => {
-                     "port" => 22
-                   },
-                   "mysql" => {
-                     "root_password" => "password"
-                   }
+                   # "ssh" => {
+                   #   "port" => 22
+                   # },
+                   # "mysql" => {
+                   #   "root_password" => "password"
+                   # }
                    )
