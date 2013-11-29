@@ -1,8 +1,18 @@
 {
     "run_list":[
         "role[web]"
+        //"recipe[deploy::his-gakusei]",
+        //"recipe[deploy::emacs]",
+        //"recipe[deploy::config]",
+        //"recipe[webdicom]"
     ],
     "sudo":{
         "users":["kuroda"]
-    }
+    },
+    "gitlab":{
+        "mysql_password": "wi3JBeBVnT3",
+        "domain_name": "localhost",
+        "access_port": "8181"
+    },
+    "execute_user": "kuroda"
 }

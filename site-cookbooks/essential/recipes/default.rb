@@ -8,7 +8,7 @@
 #
 
 # install
-%w{ zsh git unzip }.each do |p|
+%w{ zsh git unzip tig tree }.each do |p|
   package p do
     action :install
   end
